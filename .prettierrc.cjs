@@ -14,4 +14,5 @@ module.exports = {
   importOrderSortSpecifiers: true,
   importOrderGroupNamespaceSpecifiers: true,
   importOrderCaseInsensitive: true,
+  printWidth: 150
 };
