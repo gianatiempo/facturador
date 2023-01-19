@@ -11,7 +11,7 @@ const Calculator = ({ setFacturas }: CalcProps): JSX.Element => {
 
   return (
     <Card>
-      <Form name="basic" {...layout} initialValues={init} onFinish={onFinish}>
+      <Form {...layout} initialValues={init} onFinish={onFinish}>
         <Row>
           <Col xs={24} sm={12}>
             <Form.Item label="Min" name="minimo" rules={[{ required: true, message: 'Ingrese el valor de la factura minima!' }]}>

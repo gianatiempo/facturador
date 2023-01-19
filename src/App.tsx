@@ -16,7 +16,7 @@ const App = () => {
       <Header style={{ position: 'sticky', top: 0, zIndex: 1, width: '100%', background: token.colorBgContainer }}>
         <Title style={{ margin: '9px 0' }}>Facturador</Title>
       </Header>
-      <Content className="site-layout">
+      <Content>
         <div style={{ padding: 24, minHeight: 'calc(100vh - 133px)' }}>
           <Space direction="vertical" size="middle" style={{ display: 'flex' }}>
             <Col>
