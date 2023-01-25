@@ -14,7 +14,9 @@ const App = () => {
   return (
     <Layout style={{ height: '100vh' }}>
       <Header style={{ position: 'sticky', top: 0, zIndex: 1, width: '100%', background: token.colorBgContainer }}>
-        <Title style={{ margin: '9px 0' }}>Facturador</Title>
+        <Title style={{ margin: '9px 0' }} type="success">
+          Facturador
+        </Title>
       </Header>
       <Content>
         <div style={{ padding: 24, minHeight: 'calc(100vh - 133px)' }}>

@@ -2,7 +2,7 @@
   "name": "facturador",
   "homepage": "https://gianatiempo.github.io/facturador/",
   "private": true,
-  "version": "1.0.5",
+  "version": "1.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,11 +11,11 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "lint": "eslint ./src --fix",
-    "prettier": "prettier ./src --write"
+    "prettier": "prettier ./ --write"
   },
   "dependencies": {
-    "@ant-design/icons": "^5.0.0",
-    "antd": "^5.1.5",
+    "@ant-design/icons": "^5.0.1",
+    "antd": "^5.1.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -28,11 +28,12 @@
     "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-config-react-app": "^7.0.1",
-    "gh-pages": "^4.0.0",
+    "gh-pages": "^5.0.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
     "tailwindcss": "^3.2.4",
     "typescript": "^4.9.3",
-    "vite": "^4.0.0"
+    "vite": "^4.0.0",
+    "vite-plugin-pwa": "^0.14.1"
   }
 }
