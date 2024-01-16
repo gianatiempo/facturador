@@ -4,6 +4,8 @@ type CalcProps = {
   setFacturas: Function;
 };
 
+const init = { minimo: 20000, maximo: '191000', total: 500000, mult: 1000 };
+
 const Calculator = ({ setFacturas }: CalcProps): JSX.Element => {
   const onFinish = (values: any) => {
     setFacturas(calcular(values.minimo, values.maximo, values.total, values.mult));
@@ -20,7 +22,10 @@ const Calculator = ({ setFacturas }: CalcProps): JSX.Element => {
           </Col>
           <Col xs={24} sm={12}>
             <Form.Item label="Max" name="maximo" rules={[{ required: true, message: 'Ingrese el valor de la factura maxima!' }]}>
-              <InputNumber addonAfter="ARS" style={{ width: '100%' }} />
+              <Select>
+                <Select.Option value="191000">$191.000 (CC/TC/etc.)</Select.Option>
+                <Select.Option value="95000">$95.000 (Contado)</Select.Option>
+              </Select>
             </Form.Item>
           </Col>
         </Row>
@@ -33,8 +38,8 @@ const Calculator = ({ setFacturas }: CalcProps): JSX.Element => {
           <Col xs={24} sm={12}>
             <Form.Item label="Multiplo" name="mult" rules={[{ required: true, message: 'Ingrese el multiplo!' }]}>
               <Select>
-                <Select.Option value="100">100</Select.Option>
                 <Select.Option value="1000">1000</Select.Option>
+                <Select.Option value="5000">5000</Select.Option>
               </Select>
             </Form.Item>
           </Col>
@@ -46,8 +51,6 @@ const Calculator = ({ setFacturas }: CalcProps): JSX.Element => {
     </Card>
   );
 };
-
-const init = { minimo: 20000, maximo: 61000, total: 500000, mult: 100 };
 
 const layout = {
   labelCol: { xs: { span: 24 }, sm: { span: 8 }, md: { span: 4 }, lg: { span: 4 } },
