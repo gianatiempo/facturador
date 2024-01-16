@@ -4,7 +4,7 @@ type CalcProps = {
   setFacturas: Function;
 };
 
-const init = { minimo: 20000, maximo: '191000', total: 500000, mult: 1000 };
+const init = { minimo: 20000, maximo: '191000', total: 500000, mult: '1000' };
 
 const Calculator = ({ setFacturas }: CalcProps): JSX.Element => {
   const onFinish = (values: any) => {
@@ -38,8 +38,8 @@ const Calculator = ({ setFacturas }: CalcProps): JSX.Element => {
           <Col xs={24} sm={12}>
             <Form.Item label="Multiplo" name="mult" rules={[{ required: true, message: 'Ingrese el multiplo!' }]}>
               <Select>
-                <Select.Option value="1000">1000</Select.Option>
-                <Select.Option value="5000">5000</Select.Option>
+                <Select.Option value="1000">$1.000</Select.Option>
+                <Select.Option value="5000">$5.000</Select.Option>
               </Select>
             </Form.Item>
           </Col>
