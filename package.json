@@ -2,7 +2,7 @@
   "name": "facturador",
   "homepage": "https://gianatiempo.github.io/facturador/",
   "private": true,
-  "version": "1.1.2",
+  "version": "1.2.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
