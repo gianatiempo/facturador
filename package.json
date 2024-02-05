@@ -2,7 +2,7 @@
   "name": "facturador",
   "homepage": "https://gianatiempo.github.io/facturador/",
   "private": true,
-  "version": "1.2.0",
+  "version": "1.3.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -14,26 +14,23 @@
     "prettier": "prettier ./ --write"
   },
   "dependencies": {
-    "@ant-design/icons": "^5.0.1",
-    "antd": "^5.1.6",
+    "@ant-design/icons": "^5.3.0",
+    "antd": "^5.14.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "usehooks-ts": "^2.12.1"
   },
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.0.0",
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.9",
-    "@vitejs/plugin-react": "^3.0.1",
-    "autoprefixer": "^10.4.13",
-    "eslint": "^8.32.0",
-    "eslint-config-prettier": "^8.6.0",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/react": "^18.2.52",
+    "@types/react-dom": "^18.2.18",
+    "@vitejs/plugin-react": "^3.1.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^8.10.0",
     "eslint-config-react-app": "^7.0.1",
     "gh-pages": "^5.0.0",
-    "postcss": "^8.4.21",
     "prettier": "^2.8.3",
-    "tailwindcss": "^3.2.4",
-    "typescript": "^4.9.3",
-    "vite": "^4.0.0",
-    "vite-plugin-pwa": "^0.14.1"
+    "typescript": "^4.9.5",
+    "vite": "^4.5.2"
   }
 }

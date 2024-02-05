@@ -1,30 +1,31 @@
 import { lazy, useState } from 'react';
-import { Col, Layout, Space, theme, Typography } from 'antd';
+import { Col, Layout, Row, Space } from 'antd';
 
-const { Title } = Typography;
-const { Header, Content, Footer } = Layout;
+const { Content, Footer } = Layout;
 
 const Calculator = lazy(() => import('./components/Calculator'));
 const Responses = lazy(() => import('./components/Responses'));
+const History = lazy(() => import('./components/History'));
 
 const App = () => {
   const [facturas, setFacturas] = useState<number[]>([]);
-  const { token } = theme.useToken();
 
   return (
     <Layout style={{ height: '100vh' }}>
-      <Header style={{ position: 'sticky', top: 0, zIndex: 1, width: '100%', background: token.colorBgContainer }}>
-        <Title style={{ margin: '9px 0' }} type="success">
-          Facturador
-        </Title>
-      </Header>
       <Content>
         <div style={{ padding: 24, minHeight: 'calc(100vh - 133px)' }}>
           <Space direction="vertical" size="middle" style={{ display: 'flex' }}>
-            <Col>
-              <Calculator setFacturas={setFacturas} />
-            </Col>
-            <Responses facturas={facturas} />
+            <Row gutter={8}>
+              <Col xs={24} sm={6}>
+                <Calculator setFacturas={setFacturas} />
+              </Col>
+              <Col xs={24} sm={12}>
+                <Responses facturas={facturas} />
+              </Col>
+              <Col xs={24} sm={6}>
+                <History />
+              </Col>
+            </Row>
           </Space>
         </div>
       </Content>
