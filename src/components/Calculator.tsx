@@ -11,8 +11,8 @@ const Calculator = ({ setFacturas }: { setFacturas: Function }) => (
         <InputNumber
           addonAfter="ARS"
           style={{ width: '100%' }}
-          formatter={(value) => `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
-          parser={(value) => value!.replace(/\$\s?|(.*)/g, '')}
+          formatter={(value) => `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+          parser={(value) => value!.replace(/\$\s?|(,*)/g, '')}
         />
       </Form.Item>
       <Form.Item label="Max" name="maximo" rules={[{ required: true, message: 'Ingrese el valor de la factura maxima!' }]}>
@@ -25,8 +25,8 @@ const Calculator = ({ setFacturas }: { setFacturas: Function }) => (
         <InputNumber
           addonAfter="ARS"
           style={{ width: '100%' }}
-          formatter={(value) => `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, '.')}
-          parser={(value) => value!.replace(/\$\s?|(.*)/g, '')}
+          formatter={(value) => `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+          parser={(value) => value!.replace(/\$\s?|(,*)/g, '')}
         />
       </Form.Item>
       <Form.Item label="Multiplo" name="mult" rules={[{ required: true, message: 'Ingrese el multiplo!' }]}>
